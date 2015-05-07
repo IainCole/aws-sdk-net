@@ -308,7 +308,7 @@ namespace Amazon.Runtime
         /// <summary>
         /// Flag on whether to completely disable logging for this client or not.
         /// </summary>
-        internal bool DisableLogging
+        public bool DisableLogging
         {
             get { return this.disableLogging; }
             set { this.disableLogging = value; }

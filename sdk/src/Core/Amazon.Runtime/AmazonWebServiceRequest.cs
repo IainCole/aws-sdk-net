@@ -23,7 +23,7 @@ namespace Amazon.Runtime
     /// </summary>
     public abstract partial class AmazonWebServiceRequest : Amazon.Runtime.Internal.IAmazonWebServiceRequest
     {
-        internal event RequestEventHandler BeforeRequestEvent;
+        public event RequestEventHandler BeforeRequestEvent;
         EventHandler<StreamTransferProgressArgs> Amazon.Runtime.Internal.IAmazonWebServiceRequest.StreamUploadProgressCallback { get; set; }
 
         private Dictionary<string, object> requestState = null;

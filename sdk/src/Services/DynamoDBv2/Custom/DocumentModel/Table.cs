@@ -37,7 +37,7 @@ namespace Amazon.DynamoDBv2.DocumentModel
     {
         #region Private/internal members
 
-        internal enum DynamoDBConsumer
+        public enum DynamoDBConsumer
         {
             DocumentModel, DataModel, SessionStateProvider
         }
@@ -345,7 +345,7 @@ namespace Amazon.DynamoDBv2.DocumentModel
             ClearTableData();
         }
 
-        internal static Table LoadTable(IAmazonDynamoDB ddbClient, string tableName, Table.DynamoDBConsumer consumer, DynamoDBEntryConversion conversion)
+        public static Table LoadTable(IAmazonDynamoDB ddbClient, string tableName, Table.DynamoDBConsumer consumer, DynamoDBEntryConversion conversion)
         {
             Table table = new Table(ddbClient, tableName, consumer, conversion);
             table.LoadTableInfo();
